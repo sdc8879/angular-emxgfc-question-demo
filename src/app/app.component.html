@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-3 float-md-center">
+		<div class="container-fluid">
+			<div class="jumbotron">
+				<app-question [questionObj]="examArray[currentIndex]" ></app-question>
+				<hr class="my-4">
+				<app-options [optionArray]="examArray[currentIndex].options"></app-options>
+				<app-buttons [myStyle]="{float:'left'}"
+        [btnClass]="'primary'" 
+        [btnLabel]="'Previous'"
+        (steptype)="previousClick()"
+        ></app-buttons>
+        <app-buttons [myStyle]="{float:'right'}"
+        [btnLabel]="'Next'"
+        (steptype)="nextClick()"
+        [btnClass]="'success'"
+        ></app-buttons>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- {{examArray[currentIndex] | json }} -->
